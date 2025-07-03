@@ -5,14 +5,14 @@ import java.util.Collections;
 public class PrimarchTournament {
     public static void main(String[] args) {
         // Зададим примархов (будет чесно добавить всех)
-        String[] allPrimaechs = {"Хорус Луперкаль", "Леман Русс", "Феррус Манус", "Фулгрим", "Вулкан", "Рогал Дорн",
+        String[] allPrimarchs = {"Хорус Луперкаль", "Леман Русс", "Феррус Манус", "Фулгрим", "Вулкан", "Рогал Дорн",
                 "Робаут Жиллиман", "Магнус Красный", "Сангвиний", "Лев Эль'Джонсон", "Пертурабо", "Мортарион",
                 "Лоргар Аврелиан", "Джагатай Хан", "Конрад Кёрз", "Ангрон", "Корвус Коракс", "Альфарий Омегон"};
 
         // Зададим им рандомный рейтинг
         Random random = new Random();
         // Увеличил стартовое значение рейтинга, чтобы была выше вероятность попадания в турнир
-        int[] allRating = {random.nextInt(50, 100), random.nextInt(50, 100),
+        int[] allRatings = {random.nextInt(50, 100), random.nextInt(50, 100),
                 random.nextInt(50, 100), random.nextInt(50,100),
                 random.nextInt(50, 100), random.nextInt(50,100),
                 random.nextInt(50,100), random.nextInt(50,100),
@@ -27,15 +27,15 @@ public class PrimarchTournament {
         ArrayList<Integer> ratings = new ArrayList<>();
 
         // Посмотрим на примархов, их рейтинги и отбираем для турнира
-        for (int i = 0; i < allPrimaechs.length; i++) {
-            System.out.println("Примарх: " + allPrimaechs[i] + ", с рейтингом: " + allRating[i]);
+        for (int i = 0; i < allPrimarchs.length; i++) {
+            System.out.println("Примарх: " + allPrimarchs[i] + ", с рейтингом: " + allRatings[i]);
             // В турнир попадают только с рейтингов выше 80
-            if (allRating[i] > 80) {
-                System.out.println(allPrimaechs[i] + " допущен к турниру");
-                primarchs.add(allPrimaechs[i]);
-                ratings.add(allRating[i]);
+            if (allRatings[i] > 80) {
+                System.out.println(allPrimarchs[i] + " допущен к турниру");
+                primarchs.add(allPrimarchs[i]);
+                ratings.add(allRatings[i]);
             } else {
-                System.out.println(allPrimaechs[i] + " не прошел отбор");
+                System.out.println(allPrimarchs[i] + " не прошел отбор");
             }
         }
 
