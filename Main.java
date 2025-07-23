@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-
+// Файл: Main.java
 public class Main {
     public static void main(String[] args) {
         String primarch = "Леман Русс";
@@ -14,24 +13,5 @@ public class Main {
         int total = rating + bonus1 + bonus2 + bonus3;
 
         PrimarchUtils.printFinal(primarch, total);
-
-
-        System.out.println(TournamentUtils.getPrimarchTitle(primarch));
-
-        if (TournamentUtils.isEligible(rating)) {
-            System.out.println("Допущен к турниру");
-        } else {
-            System.out.println("Не допущен к турниру");
-        }
-
-        ArrayList<Integer> scores = new ArrayList<>();
-        scores.add(bonus1);
-        scores.add(bonus2);
-        scores.add(bonus3);
-        scores.add(rating);
-        int totalPoints = TournamentUtils.totalPoints(scores);
-
-        System.out.println("Общие очки примарха: " + totalPoints);
-
     }
 }
